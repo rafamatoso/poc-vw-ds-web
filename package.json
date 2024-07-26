@@ -2,15 +2,17 @@
   "name": "poc-vw-ds-web",
   "version": "1.0.1",
   "description": "poc com biblioteca de componentes",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "keywords": [],
   "author": "rafamatoso <rafaelmatosog@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build:ts": "tsc",
+    "build:webpack": "webpack",
+    "build": "npm run build:ts && npm run build:webpack",
     "test": "jest --coverage",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "build": "webpack"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "jest-environment-jsdom": "^29.7.0",
